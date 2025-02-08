@@ -12,13 +12,8 @@
     <div class="container">
         <header>
             <h1>DaCapo</h1>
-            <nav>
-                <button class="tab-button active" data-tab="metronome">Métronome</button>
-                <button class="tab-button" data-tab="tuner">Accordeur</button>
-                <button class="tab-button" data-tab="log">Journal</button>
-            </nav>
         </header>
-        <main>
+        <main class="content">
             <div id="metronome" class="tab-content active">
                 <button id="metronome-button">Start</button>
                 <input type="range" id="tempo-slider" min="40" max="208" value="120">
@@ -36,6 +31,20 @@
                 <div id="log-entries"></div>
             </div>
         </main>
+        <nav class="bottom-nav">
+            <button class="nav-button active" data-tab="metronome">
+                <img src="icons/metronome.svg" alt="Métronome">
+                Métronome
+            </button>
+            <button class="nav-button" data-tab="tuner">
+                <img src="icons/tuner.svg" alt="Accordeur">
+                Accordeur
+            </button>
+            <button class="nav-button" data-tab="log">
+                <img src="icons/log.svg" alt="Journal">
+                Journal
+            </button>
+        </nav>
     </div>
     <script src="script.js"></script>
 </body>
