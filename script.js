@@ -68,7 +68,6 @@ function playNote(note) {
             break;
         case 'A':
             frequency = 442;
-            break;
         case 'E':
             frequency = 329.63;
             break;
