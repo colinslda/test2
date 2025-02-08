@@ -10,18 +10,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>DaCapo</h1>
-        <div class="metronome">
-            <button id="metronome-button">Start</button>
-            <input type="range" id="tempo-slider" min="40" max="208" value="120">
-            <span id="tempo-value">120 BPM</span>
-        </div>
-        <div class="tuner">
-            <button class="tune-button" data-note="G">G</button>
-            <button class="tune-button" data-note="D">D</button>
-            <button class="tune-button" data-note="A">A</button>
-            <button class="tune-button" data-note="E">E</button>
-        </div>
+        <header>
+            <h1>DaCapo</h1>
+            <nav>
+                <button class="tab-button active" data-tab="metronome">Métronome</button>
+                <button class="tab-button" data-tab="tuner">Accordeur</button>
+                <button class="tab-button" data-tab="log">Journal</button>
+            </nav>
+        </header>
+        <main>
+            <div id="metronome" class="tab-content active">
+                <button id="metronome-button">Start</button>
+                <input type="range" id="tempo-slider" min="40" max="208" value="120">
+                <span id="tempo-value">120 BPM</span>
+            </div>
+            <div id="tuner" class="tab-content">
+                <button class="tune-button" data-note="G">G</button>
+                <button class="tune-button" data-note="D">D</button>
+                <button class="tune-button" data-note="A">A</button>
+                <button class="tune-button" data-note="E">E</button>
+            </div>
+            <div id="log" class="tab-content">
+                <textarea id="log-textarea" placeholder="Prenez des notes ici..."></textarea>
+                <button id="save-log">Enregistrer</button>
+                <div id="log-entries"></div>
+            </div>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
