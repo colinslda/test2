@@ -42,7 +42,7 @@ function startMetronome() {
     const tempo = tempoSlider.value;
     const interval = 60000 / tempo;
     metronomeInterval = setInterval(() => {
-        const audio = new Audio('https://example.com/click.mp3'); // Remplacez par le chemin de votre son de métronome
+        const audio = new Audio('https://www.metronomeonline.com/'); // Remplacez par le chemin de votre son de métronome
         audio.play();
     }, interval);
 }
@@ -115,4 +115,15 @@ saveLogButton.addEventListener('click', () => {
         logEntries.appendChild(entryDiv);
         logTextarea.value = '';
     }
+});
+
+// Connexion
+const loginForm = document.getElementById('login-form');
+
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    alert(`Email: ${email}, Mot de passe: ${password}`);
+    // Ajoutez ici la logique de connexion
 });
