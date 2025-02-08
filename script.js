@@ -1,3 +1,17 @@
+// Gestion des onglets
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tab = button.getAttribute('data-tab');
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(tab).classList.add('active');
+    });
+});
+
 // Métronome
 let metronomeInterval;
 const metronomeButton = document.getElementById('metronome-button');
@@ -86,3 +100,19 @@ function playNote(note) {
         gainNode.disconnect();
     }, 1000);
 }
+
+// Journal de bord
+const saveLogButton = document.getElementById('save-log');
+const logTextarea = document.getElementById('log-textarea');
+const logEntries = document.getElementById('log-entries');
+
+saveLogButton.addEventListener('click', () => {
+    const logEntry = logTextarea.value.trim();
+    if (logEntry) {
+        const entryDiv = document.createElement('div');
+        entryDiv.classList.add('log-entry');
+        entryDiv.textContent = logEntry;
+        logEntries.appendChild(entryDiv);
+        logTextarea.value = '';
+    }
+});
