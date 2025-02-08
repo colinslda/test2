@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaCapo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>DaCapo</h1>
+        <div class="metronome">
+            <button id="metronome-button">Start</button>
+            <input type="range" id="tempo-slider" min="40" max="208" value="120">
+            <span id="tempo-value">120 BPM</span>
+        </div>
+        <div class="tuner">
+            <button class="tune-button" data-note="G">G</button>
+            <button class="tune-button" data-note="D">D</button>
+            <button class="tune-button" data-note="A">A</button>
+            <button class="tune-button" data-note="E">E</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
